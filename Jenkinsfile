@@ -19,12 +19,7 @@ pipeline {
             }
         }
     }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-    }
-	post {
+   	post {
         always {
             echo 'This will always run'
         }
