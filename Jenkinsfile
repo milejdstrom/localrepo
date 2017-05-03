@@ -18,6 +18,25 @@ pipeline {
                 echo 'Hello World'
             }
         }
+		stage('Deploy - Staging') {
+            steps {
+                bat 'set'
+                           }
+        }
+
+        stage('Sanity check') {
+            steps {
+                input "Does the staging environment look ok?"
+            }
+        }
+
+        stage('Deploy - Production') {
+            steps {
+                echo 'ready'
+            }
+        }
+		
+		
     }
    	post {
         always {
