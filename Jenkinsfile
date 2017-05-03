@@ -11,7 +11,9 @@ pipeline {
 }
 */
 pipeline {
-    agent any
+  /*  agent any */
+	
+	agent { node { label 'FLEXIDUS3' }
     stages {
         stage('Example') {
             steps {
